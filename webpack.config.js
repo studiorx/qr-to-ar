@@ -17,8 +17,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({ template: 'src/index-template.html' }),
-    new CopyWebpackPlugin([{ from: 'src/img', to: 'img' }]),
-    new CopyWebpackPlugin([{ from: 'src/models', to: 'models' }]),
+    new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
   ],
   module: {
     rules: [{
@@ -29,7 +28,7 @@ module.exports = {
         { loader: 'sass-loader' },
       ],
     }, {
-      test: /\.(png|svg|jpg|gif|ttf|eot|woff|woff2|mp4)$/,
+      test: /\.(png|svg|jpg|gif|ttf|eot|woff|woff2|mp4|mtl|obj)$/,
       use: [
         'file-loader',
       ],
