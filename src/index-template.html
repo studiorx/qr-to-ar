@@ -2,17 +2,21 @@
 <html>
 <head>
   <title>QR to AR test</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
-  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"> </script>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover'>
+  <script src='https://aframe.io/releases/0.6.1/aframe.min.js'></script>
+  <script src='https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js'> </script>
 </head>
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs='debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-    <a-marker preset='custom' type="pattern" url='img/marker.patt'>
-      <a-box position='0 0.5 0' material='color: green;'></a-box>
-      <a-asset-item id="object" src="models/rx.obj"></a-asset-item>
-      <a-asset-item id="material" src="models/rx.mtl"></a-asset-item>
+    <a-assets>
+      <a-asset-item id="logo-obj" src="assets/models/RX3.obj"></a-asset-item>
+      <a-asset-item id="logo-mtl" src="assets/models/RX3.mtl"></a-asset-item>
+    </a-assets>
+    <a-marker preset='custom' type='pattern' url='assets/img/marker.patt'>
+      <!-- <a-box position='0 0.5 0' material='color: green; side: double; transparent: true; opacity: 0.75;'></a-box> -->
+      <!-- Using the asset management system. -->
+      <a-obj-model src="#logo-obj" mtl="#crate-mtl" scale="0.275 0.275 0.275"></a-obj-model>
     </a-marker>
   	<a-entity camera></a-entity>
   </a-scene>

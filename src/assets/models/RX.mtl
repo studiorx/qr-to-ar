@@ -1,0 +1,14 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 06.11.2018 17:07:56
+
+newmtl Material__25
+	Ns 29.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.7608 0.4431 0.0667
+	Kd 0.7608 0.4431 0.0667
+	Ks 0.7380 0.7380 0.7380
+	Ke 0.0000 0.0000 0.0000
