@@ -18,6 +18,8 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({ template: 'src/index-template.html' }),
     new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
+    // new webpack.ProvidePlugin({ THREE: 'three' }),
+    // new webpack.ProvidePlugin({ AR: 'ar.js' }),
   ],
   module: {
     rules: [{
@@ -37,5 +39,8 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  node: {
+    fs: 'empty',
   },
 };

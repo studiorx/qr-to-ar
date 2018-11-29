@@ -15,7 +15,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "ar.js": "^1.6.2",
+    "es6-tween": "^5.3.1",
+    "express": "^4.16.4",
+    "three": "^0.98.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
