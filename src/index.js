@@ -116,8 +116,8 @@ const init = () => {
   App.light1.lookAt(0, 0, 0);
   App.light1.intensity = 1;
   App.light1.castShadow = true;
-  App.light1.shadow.mapSize.width = 8192;
-  App.light1.shadow.mapSize.height = 8192;
+  App.light1.shadow.mapSize.width = 1024;
+  App.light1.shadow.mapSize.height = 1024;
   App.light1.shadow.camera.near = 0.5;
   App.light1.shadow.camera.far = 30;
   App.light1.shadow.camera.fov = 150;
