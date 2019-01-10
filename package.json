@@ -8,6 +8,7 @@
     "build": "webpack",
     "serve": "node server",
     "connect": "ssh ubuntu@52.200.27.98",
+    "ngrok": "ngrok http 8080 -host-header=\"localhost:8080\"",
     "deploy-client": "npm run build && rsync -avz -e ssh dist/* ubuntu@52.200.27.98:/home/ubuntu/qr2ar/dist",
     "deploy-server": "rsync -avz -e ssh server.js package.json ubuntu@52.200.27.98:/home/ubuntu/qr2ar/",
     "deploy": "npm run deploy-client && npm run deploy-server"
@@ -18,7 +19,8 @@
     "ar.js": "^1.6.2",
     "es6-tween": "^5.3.1",
     "express": "^4.16.4",
-    "three": "^0.98.0"
+    "three": "^0.98.0",
+    "three-gltf-loader": "^1.98.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",

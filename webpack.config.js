@@ -9,6 +9,7 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     host: '0.0.0.0',
+    disableHostCheck: true,
     proxy: {
       '/api': 'http://localhost:8000',
     },
@@ -30,7 +31,7 @@ module.exports = {
         { loader: 'sass-loader' },
       ],
     }, {
-      test: /\.(png|svg|jpg|gif|ttf|eot|woff|woff2|mp4|mtl|obj)$/,
+      test: /\.(png|svg|jpg|gif|ttf|eot|woff|woff2|mp4|mtl|obj|fbx)$/,
       use: [
         'file-loader',
       ],
